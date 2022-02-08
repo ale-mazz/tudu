@@ -5,70 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b8acd868-49c0-44ce-82ce-2e17754d03ee" name="Changes" comment="Initial commit and setup">
-      <change afterPath="$PROJECT_DIR$/assets/fonts/BukhariScript-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Lato-Black.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Lato-BlackItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Lato-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Lato-BoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Lato-Italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Lato-Light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Lato-LightItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Lato-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Lato-Thin.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Lato-ThinItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Montserrat-Black.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Montserrat-BlackItalic.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Montserrat-Bold.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Montserrat-BoldItalic.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Montserrat-ExtraBold.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Montserrat-ExtraBoldItalic.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Montserrat-ExtraLight.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Montserrat-ExtraLightItalic.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Montserrat-Italic.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Montserrat-Light.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Montserrat-LightItalic.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Montserrat-Medium.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Montserrat-MediumItalic.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Montserrat-Regular.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Montserrat-SemiBold.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Montserrat-SemiBoldItalic.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Montserrat-Thin.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Montserrat-ThinItalic.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/MontserratAlternates-Black.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/MontserratAlternates-BlackItalic.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/MontserratAlternates-Bold.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/MontserratAlternates-BoldItalic.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/MontserratAlternates-ExtraBold.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/MontserratAlternates-ExtraBoldItalic.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/MontserratAlternates-ExtraLight.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/MontserratAlternates-ExtraLightItalic.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/MontserratAlternates-Italic.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/MontserratAlternates-Light.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/MontserratAlternates-LightItalic.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/MontserratAlternates-Medium.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/MontserratAlternates-MediumItalic.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/MontserratAlternates-Regular.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/MontserratAlternates-SemiBold.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/MontserratAlternates-SemiBoldItalic.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/MontserratAlternates-Thin.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/MontserratAlternates-ThinItalic.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/add-item-modal.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/tudu.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eas.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-native.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redux/actions/item.actions/actions.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redux/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redux/reducers/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redux/reducers/reducers.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redux/store.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redux/types/types.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/calendar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/calendar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/home.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/settings.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/settings.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/adaptive-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/splash.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,6 +25,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
@@ -96,9 +42,6 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
-  </component>
-  <component name="PackageJsonUpdateNotifier">
-    <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="ProjectId" id="24buc2tgM6kXvomsTr17q0iSZXz" />
   <component name="ProjectLevelVcsManager">
@@ -152,6 +95,7 @@
       <workItem from="1643976484261" duration="19036000" />
       <workItem from="1644143354896" duration="23282000" />
       <workItem from="1644235513700" duration="8234000" />
+      <workItem from="1644322505452" duration="452000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit and setup">
       <created>1643916966034</created>

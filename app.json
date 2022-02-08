@@ -1,12 +1,12 @@
 {
   "expo": {
-    "name": "tudu",
+    "name": "Tudu",
     "slug": "tudu",
-    "version": "1.0.0",
+    "version": "0.0.1",
     "orientation": "portrait",
     "icon": "./assets/playstore-icon.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./android/mipmap-xxxhdpi/ic_launcher_round.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -16,14 +16,7 @@
     "assetBundlePatterns": [
       "**/*"
     ],
-    "ios": {
-      "supportsTablet": true
-    },
     "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
-      },
       "package": "com.alemaz.tudu"
     },
     "web": {
