@@ -26,7 +26,6 @@
     "react-dom": "17.0.1",
     "react-native": "0.64.3",
     "react-native-bouncy-checkbox": "^2.1.10",
-    "react-native-drop-shadow": "^0.0.4",
     "react-native-emoji": "^1.8.0",
     "react-native-popup-menu": "^0.15.12",
     "react-native-safe-area-context": "3.3.2",

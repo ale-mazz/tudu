@@ -74,13 +74,7 @@ const TabNavigator = () => {
 
 export default function App(): JSX.Element {
   let [fontsLoaded] = useFonts({
-    "Lato-Regular": require("./assets/fonts/Lato-Regular.ttf"),
-    "Lato-Black": require("./assets/fonts/Lato-Black.ttf"),
-    "Lato-Bold": require("./assets/fonts/Lato-Bold.ttf"),
-    "Lato-Italic": require("./assets/fonts/Lato-Italic.ttf"),
-    "Lato-Light": require("./assets/fonts/Lato-Light.ttf"),
-    "Lato-Thin": require("./assets/fonts/Lato-Thin.ttf"),
-    "Montserrat-Medium": require("./assets/fonts/MontserratAlternates-Medium.otf"),
+    "Montserrat-Medium": require("./assets/fonts/Montserrat-Medium.otf"),
     "Montserrat-Bold": require("./assets/fonts/Montserrat-Bold.otf"),
     "Montserrat-Regular": require("./assets/fonts/Montserrat-Regular.otf"),
   });

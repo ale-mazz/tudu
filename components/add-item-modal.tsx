@@ -65,7 +65,9 @@ export const AddItemModal: React.FC<Props> = ({
         </TouchableWithoutFeedback>
         <View style={styles.modalView}>
           <View style={styles.modalHeader}>
-            <Text style={{ marginRight: 4 }}>Aggiungi un nuovo tudu!</Text>
+            <Text style={{ marginRight: 4, fontFamily: "Montserrat-Regular" }}>
+              Aggiungi un nuovo tudu!
+            </Text>
             <Emoji name="blush" style={{ fontSize: 18 }} />
           </View>
           <View style={styles.modalContentView}>
