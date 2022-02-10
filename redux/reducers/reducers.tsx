@@ -14,25 +14,24 @@ export const ItemsReducer = (
   state: ItemListState = initialState,
   action: ItemListAction
 ) => {
-  const newState: ItemListState = JSON.parse(JSON.stringify(state));
   switch (action.type) {
     case ADD_ITEM:
-      return { ...newState, items: [...newState.items, action.item] };
+      return { ...state, items: [...state.items, action.item] };
     case REMOVE_ITEM:
-      const itemsFiltered = newState.items?.filter(
+      const itemsFiltered = state.items?.filter(
         (item, itemIndex) => itemIndex !== action.index
       );
-      return { ...newState, items: itemsFiltered };
+      return { ...state, items: itemsFiltered };
     case UPDATE_ITEM:
       return {
-        ...newState,
-        items: newState.items.map((item, index) => {
+        ...state,
+        items: state.items.map((item, index) => {
           return index !== action.index
             ? item
             : { ...item, completed: !item.completed };
         }),
       };
     default:
-      return newState;
+      return state;
   }
 };

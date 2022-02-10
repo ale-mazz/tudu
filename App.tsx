@@ -10,8 +10,9 @@ import { useFonts } from "@expo-google-fonts/lato";
 import AppLoading from "expo-app-loading";
 import { Entypo, Feather } from "@expo/vector-icons";
 import { Provider } from "react-redux";
-import { store } from "./redux";
+import { persistor, store } from "./redux";
 import { MenuProvider } from "react-native-popup-menu";
+import { PersistGate } from "redux-persist/integration/react";
 
 type StackParamList = {
   TabNavigator: undefined;
@@ -90,19 +91,21 @@ export default function App(): JSX.Element {
 
   return (
     <Provider store={store}>
-      <SafeAreaProvider>
-        <MenuProvider>
-          <NavigationContainer>
-            <Stack.Navigator>
-              <Stack.Screen
-                name="TabNavigator"
-                component={TabNavigator}
-                options={{ headerShown: false }}
-              />
-            </Stack.Navigator>
-          </NavigationContainer>
-        </MenuProvider>
-      </SafeAreaProvider>
+      <PersistGate loading={null} persistor={persistor}>
+        <SafeAreaProvider>
+          <MenuProvider>
+            <NavigationContainer>
+              <Stack.Navigator>
+                <Stack.Screen
+                  name="TabNavigator"
+                  component={TabNavigator}
+                  options={{ headerShown: false }}
+                />
+              </Stack.Navigator>
+            </NavigationContainer>
+          </MenuProvider>
+        </SafeAreaProvider>
+      </PersistGate>
     </Provider>
   );
 }

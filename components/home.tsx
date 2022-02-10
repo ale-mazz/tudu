@@ -18,7 +18,7 @@ import { RootState } from "../redux";
 
 const Home: React.FC = () => {
   const [modalVisible, setModalVisible] = React.useState(false);
-  const { items } = useSelector((state: RootState) => state.itemsReducer);
+  const { items } = useSelector((state: RootState) => state.items);
 
   const onOpenModal = () => {
     setModalVisible(true);
