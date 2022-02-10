@@ -3,13 +3,11 @@ import {
   ItemListAction,
   ItemListState,
   REMOVE_ITEM,
-  SET_MODAL_VISIBLE,
   UPDATE_ITEM,
 } from "../types/types";
 
 const initialState: ItemListState = {
   items: [],
-  modalVisible: false,
 };
 
 export const ItemsReducer = (
@@ -34,8 +32,6 @@ export const ItemsReducer = (
             : { ...item, completed: !item.completed };
         }),
       };
-    case SET_MODAL_VISIBLE:
-      return { ...newState, modalVisible: action.modalVisible };
     default:
       return newState;
   }

@@ -13,19 +13,15 @@ import { AntDesign } from "@expo/vector-icons";
 import { AddItemModal } from "./add-item-modal";
 import { Item } from "../redux/types/types";
 import Tudu from "./tudu";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { RootState } from "../redux";
-import { setModalVisible } from "../redux/actions/item.actions/actions";
 
 const Home: React.FC = () => {
-  const dispatch = useDispatch();
-
-  const { items, modalVisible } = useSelector(
-    (state: RootState) => state.itemsReducer
-  );
+  const [modalVisible, setModalVisible] = React.useState(false);
+  const { items } = useSelector((state: RootState) => state.itemsReducer);
 
   const onOpenModal = () => {
-    dispatch(setModalVisible(true));
+    setModalVisible(true);
   };
 
   return (
@@ -49,7 +45,10 @@ const Home: React.FC = () => {
           <Tudu key={item.text + "_" + index} item={item} index={index} />
         ))}
 
-        <AddItemModal modalVisible={modalVisible} />
+        <AddItemModal
+          modalVisible={modalVisible}
+          setModalVisible={setModalVisible}
+        />
       </ScrollView>
     </View>
   );

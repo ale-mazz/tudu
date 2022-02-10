@@ -6,11 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="b8acd868-49c0-44ce-82ce-2e17754d03ee" name="Changes" comment="Updated icons, name and app settings">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/ic_launcher-web.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/app-icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/add-item-modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/add-item-modal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/home.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/tudu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/tudu.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redux/actions/item.actions/actions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/redux/actions/item.actions/actions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redux/reducers/reducers.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/redux/reducers/reducers.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redux/types/types.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/redux/types/types.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +99,12 @@
       <workItem from="1643976484261" duration="19036000" />
       <workItem from="1644143354896" duration="23282000" />
       <workItem from="1644235513700" duration="8234000" />
-      <workItem from="1644322505452" duration="1286000" />
+      <workItem from="1644322505452" duration="3570000" />
+      <workItem from="1644341284055" duration="54000" />
+      <workItem from="1644341348096" duration="7580000" />
+      <workItem from="1644520523312" duration="58000" />
+      <workItem from="1644520593825" duration="9000" />
+      <workItem from="1644520705729" duration="1179000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit and setup">
       <created>1643916966034</created>
@@ -111,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644323096384</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Updated icons, name and app settings">
+      <created>1644323950879</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1644323950879</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
