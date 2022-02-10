@@ -1,10 +1,15 @@
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
 import BouncyCheckbox from "react-native-bouncy-checkbox";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { useDispatch } from "react-redux";
 import { Item } from "../redux/types/types";
 import { removeItem, updateItem } from "../redux/actions/item.actions/actions";
+import {
+  Menu,
+  MenuOption,
+  MenuOptions,
+  MenuTrigger,
+} from "react-native-popup-menu";
 
 type Props = {
   item: Item;
@@ -12,13 +17,13 @@ type Props = {
 };
 
 export const Tudu: React.FC<Props> = ({ item, index }) => {
-  const [deleteButton, setDeleteButton] = React.useState(false);
+  const [menuOpened, setMenuOpened] = React.useState(false);
 
   const dispatch = useDispatch();
 
   const onDeleteItem = (index: number) => {
     dispatch(removeItem(index));
-    setDeleteButton(false);
+    setMenuOpened(false);
   };
 
   const onUpdateItem = (item: Item, index: number) => {
@@ -26,48 +31,61 @@ export const Tudu: React.FC<Props> = ({ item, index }) => {
   };
 
   const setDeleting = () => {
-    setDeleteButton(true);
+    setMenuOpened(true);
   };
 
-  const undoDeleting = () => {
-    setDeleteButton(false);
-  };
-
-  return deleteButton ? (
-    <View style={styles(item.completed).item}>
-      <TouchableOpacity onPress={(event) => onDeleteItem(index)}>
-        <Text style={styles(item.completed).deleteButtonText}>Elimina!</Text>
-      </TouchableOpacity>
-      <TouchableOpacity onPress={(event) => undoDeleting()}>
-        <MaterialCommunityIcons
-          name="restore"
-          size={30}
-          color="cornflowerblue"
-          style={styles(item.completed).undoIcon}
+  return (
+    <View>
+      <View style={styles(item).item}>
+        <View
+          style={{
+            width: 10,
+            height: 10,
+            backgroundColor: item.color,
+            borderRadius: 20,
+            marginRight: 12,
+            marginLeft: 8,
+          }}
         />
-      </TouchableOpacity>
-    </View>
-  ) : (
-    <View style={styles(item.completed).item}>
-      <TouchableOpacity
-        style={styles(item.completed).text}
-        onLongPress={(event) => setDeleting()}
-      >
-        <Text style={styles(item.completed).text}>{item.text}</Text>
-      </TouchableOpacity>
-      <BouncyCheckbox
-        isChecked={item.completed}
-        fillColor="cornflowerblue"
-        iconStyle={{
-          borderColor: "cornflowerblue",
-        }}
-        onPress={() => onUpdateItem(item, index)}
-      />
+        <TouchableOpacity
+          style={styles(item).text}
+          onLongPress={(event) => setDeleting()}
+        >
+          <Text style={styles(item).text}>{item.text}</Text>
+        </TouchableOpacity>
+        <BouncyCheckbox
+          isChecked={item.completed}
+          fillColor="cornflowerblue"
+          iconStyle={{
+            borderColor: "cornflowerblue",
+          }}
+          onPress={() => onUpdateItem(item, index)}
+        />
+      </View>
+      <Menu opened={menuOpened} onBackdropPress={() => setMenuOpened(false)}>
+        <MenuTrigger />
+        <MenuOptions customStyles={optionsStyles}>
+          <MenuOption value={1} onSelect={() => onDeleteItem(index)}>
+            <Text style={styles(item).menuOptionText}>Elimina tudu ..</Text>
+          </MenuOption>
+        </MenuOptions>
+      </Menu>
     </View>
   );
 };
 
-const styles = (isChecked: boolean) =>
+const optionsStyles = {
+  OptionTouchableComponent: TouchableOpacity,
+  optionsContainer: {
+    padding: 5,
+    borderRadius: 10,
+  },
+  optionTouchable: {
+    activeOpacity: 0.3,
+  },
+};
+
+const styles = (item: Item) =>
   StyleSheet.create({
     item: {
       paddingTop: 12,
@@ -79,13 +97,20 @@ const styles = (isChecked: boolean) =>
       alignItems: "center",
     },
     text: {
-      marginLeft: 8,
+      marginLeft: 0,
       marginRight: 12,
       fontFamily: "Montserrat-Regular",
       fontSize: 16,
       flexShrink: 1,
-      textDecorationLine: isChecked ? "line-through" : "none",
-      opacity: isChecked ? 0.3 : 1,
+      flexGrow: 1,
+      textDecorationLine: item.completed ? "line-through" : "none",
+      opacity: item.completed ? 0.3 : 1,
+    },
+    menuOptionText: {
+      fontFamily: "Montserrat-Regular",
+      fontSize: 14,
+      textAlign: "center",
+      color: "black",
     },
     deleteButtonText: {
       textAlign: "center",

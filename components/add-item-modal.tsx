@@ -10,32 +10,30 @@ import {
   View,
 } from "react-native";
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../redux";
-import {
-  addItem,
-  setModalVisible,
-} from "../redux/actions/item.actions/actions";
+import { useDispatch } from "react-redux";
+import { addItem } from "../redux/actions/item.actions/actions";
 import { Item } from "../redux/types/types";
 import { Ionicons } from "@expo/vector-icons";
 import Emoji from "react-native-emoji";
 
 type Props = {
   modalVisible: boolean;
+  setModalVisible: (value: boolean) => void;
 };
 
-export const AddItemModal: React.FC<Props> = ({}) => {
+export const AddItemModal: React.FC<Props> = ({
+  modalVisible,
+  setModalVisible,
+}) => {
   const dispatch = useDispatch();
 
   const [inputText, setInputText] = React.useState("");
-  const { items, modalVisible } = useSelector(
-    (state: RootState) => state.itemsReducer
-  );
 
   const addTuduItem = (itemText: string) => {
     const newItem: Item = {
       text: itemText,
       completed: false,
+      color: getRandomColor(),
     };
     dispatch(addItem(newItem));
   };
@@ -43,12 +41,12 @@ export const AddItemModal: React.FC<Props> = ({}) => {
   const onSuccessfulCloseModal = () => {
     setInputText("");
     addTuduItem(inputText);
-    dispatch(setModalVisible(false));
+    setModalVisible(false);
   };
 
   const onCloseModal = () => {
     setInputText("");
-    dispatch(setModalVisible(false));
+    setModalVisible(false);
   };
 
   return (
@@ -67,7 +65,9 @@ export const AddItemModal: React.FC<Props> = ({}) => {
         </TouchableWithoutFeedback>
         <View style={styles.modalView}>
           <View style={styles.modalHeader}>
-            <Text style={{ marginRight: 4 }}>Aggiungi un nuovo tudu!</Text>
+            <Text style={{ marginRight: 4, fontFamily: "Montserrat-Regular" }}>
+              Aggiungi un nuovo tudu!
+            </Text>
             <Emoji name="blush" style={{ fontSize: 18 }} />
           </View>
           <View style={styles.modalContentView}>
@@ -102,6 +102,28 @@ export const AddItemModal: React.FC<Props> = ({}) => {
     </Modal>
   );
 };
+
+function getRandomColor() {
+  const color1 = "#FF6F00";
+  const color2 = "#FDD835";
+  const color3 = "#64FFDA";
+  const color4 = "#84FFFF";
+  const color5 = "#448AFF";
+  const color6 = "#448AFF";
+  const color7 = "#FF5252";
+  const color8 = "#BA68C8";
+  const colors = [
+    color1,
+    color2,
+    color3,
+    color4,
+    color5,
+    color6,
+    color7,
+    color8,
+  ];
+  return colors[Math.floor(Math.random() * 8)];
+}
 
 const styles = StyleSheet.create({
   container: {
