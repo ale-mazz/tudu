@@ -5,78 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b8acd868-49c0-44ce-82ce-2e17754d03ee" name="Changes" comment="Persisted store with AsyncStorage">
+      <change afterPath="$PROJECT_DIR$/components/navigator/tab-navigator.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/mipmap-hdpi/ic_launcher_foreground.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/mipmap-ldpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/mipmap-mdpi/ic_launcher_foreground.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/mipmap-xhdpi/ic_launcher_foreground.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/mipmap-xxhdpi/ic_launcher_foreground.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/mipmap-xxxhdpi/ic_launcher_foreground.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/playstore-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/values/ic_launcher_background.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/BukhariScript-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/Lato-Black.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/Lato-BlackItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/Lato-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/Lato-BoldItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/Lato-Italic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/Lato-Light.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/Lato-LightItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/Lato-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/Lato-Thin.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/Lato-ThinItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/MontserratAlternates-Black.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/MontserratAlternates-BlackItalic.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/MontserratAlternates-Bold.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/MontserratAlternates-BoldItalic.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/MontserratAlternates-ExtraBold.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/MontserratAlternates-ExtraBoldItalic.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/MontserratAlternates-ExtraLight.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/MontserratAlternates-ExtraLightItalic.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/MontserratAlternates-Italic.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/MontserratAlternates-Light.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/MontserratAlternates-LightItalic.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/MontserratAlternates-Medium.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/MontserratAlternates-MediumItalic.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/MontserratAlternates-Regular.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/MontserratAlternates-SemiBold.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/MontserratAlternates-SemiBoldItalic.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/MontserratAlternates-Thin.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/MontserratAlternates-ThinItalic.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/add-item-modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/add-item-modal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eas.json" beforeDir="false" afterPath="$PROJECT_DIR$/eas.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/AppIcon.appiconset/Contents.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/AppIcon.appiconset/Icon-App-20x20@1x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/AppIcon.appiconset/Icon-App-20x20@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/AppIcon.appiconset/Icon-App-20x20@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/AppIcon.appiconset/Icon-App-29x29@1x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/AppIcon.appiconset/Icon-App-29x29@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/AppIcon.appiconset/Icon-App-29x29@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/AppIcon.appiconset/Icon-App-40x40@1x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/AppIcon.appiconset/Icon-App-40x40@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/AppIcon.appiconset/Icon-App-40x40@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/AppIcon.appiconset/Icon-App-60x60@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/AppIcon.appiconset/Icon-App-60x60@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/AppIcon.appiconset/Icon-App-76x76@1x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/AppIcon.appiconset/Icon-App-76x76@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/AppIcon.appiconset/Icon-App-83.5x83.5@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/AppIcon.appiconset/ItunesArtwork@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/iTunesArtwork@1x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/iTunesArtwork@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/iTunesArtwork@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,6 +24,32 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="main" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="main" />
@@ -149,7 +107,7 @@
       <recent name="$PROJECT_DIR$/redux/actions/item.actions" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.build android">
     <configuration name="build android" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -195,7 +153,8 @@
       <workItem from="1644341348096" duration="7580000" />
       <workItem from="1644520523312" duration="58000" />
       <workItem from="1644520593825" duration="9000" />
-      <workItem from="1644520705729" duration="9791000" />
+      <workItem from="1644520705729" duration="10443000" />
+      <workItem from="1644598553582" duration="1076000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit and setup">
       <created>1643916966034</created>
@@ -232,7 +191,21 @@
       <option name="project" value="LOCAL" />
       <updated>1644527489433</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Persisted store with AsyncStorage">
+      <created>1644530887318</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1644530887318</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Persisted store with AsyncStorage">
+      <created>1644530993472</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1644530993472</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
