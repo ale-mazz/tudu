@@ -5,17 +5,19 @@
     "version": "0.0.3",
     "orientation": "portrait",
     "icon": "./assets/app-icon.png",
+    "sdkVersion": "44.0.0",
+    "updates": { "fallbackToCacheTimeout": 0 },
     "assetBundlePatterns": [
       "**/*"
     ],
     "android": {
-      "package": "com.alemaz.tudu"
+      "package": "com.alemaz.tudu",
+    },
+    "ios": {
+      "bundleIdentifier": "com.alemaz.tudu"
     },
     "plugins": [
       "@notifee/react-native"
-    ],
-    "ios": {
-      "bundleIdentifier": "com.alemaz.tudu"
-    }
+    ]
   }
 }
