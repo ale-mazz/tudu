@@ -10,6 +10,12 @@
     ],
     "android": {
       "package": "com.alemaz.tudu"
+    },
+    "plugins": [
+      "@notifee/react-native"
+    ],
+    "ios": {
+      "bundleIdentifier": "com.alemaz.tudu"
     }
   }
 }
