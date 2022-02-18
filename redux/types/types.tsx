@@ -2,15 +2,21 @@ export interface Item {
   text: string;
   completed: boolean;
   color: string;
+  day: string;
 }
 
 export type ItemListState = {
   items: Item[];
 };
 
+export type DayState = {
+  selectedDay: string;
+};
+
 export const ADD_ITEM = "ADD_ITEM";
 export const REMOVE_ITEM = "REMOVE_ITEM";
 export const UPDATE_ITEM = "UPDATE_ITEM";
+export const SET_SELECTED_DAY = "SET_SELECTED_DAY";
 
 export type AddItemAction = {
   type: typeof ADD_ITEM;
@@ -25,6 +31,13 @@ export type RemoveItemAction = {
   type: typeof REMOVE_ITEM;
   index: number;
 };
+
+export type SetSelectedDay = {
+  type: typeof SET_SELECTED_DAY;
+  selectedDay: string;
+};
+
+export type DayAction = SetSelectedDay;
 
 export type ItemListAction =
   | AddItemAction

@@ -1,7 +1,7 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Home from "../home";
 import { Entypo, Feather } from "@expo/vector-icons";
-import Calendar from "../calendar";
+import Calendar from "../tudu-calendar";
 import Settings from "../settings";
 
 const Tab = createBottomTabNavigator();
@@ -22,7 +22,7 @@ export const TabNavigator = () => {
           tabBarLabel: "Home",
           tabBarShowLabel: false,
           headerShown: false,
-          tabBarIcon: ({ focused, color, size }) => (
+          tabBarIcon: ({ focused, color }) => (
             <Entypo name="list" size={focused ? 36 : 24} color={color} />
           ),
         }}
@@ -34,7 +34,7 @@ export const TabNavigator = () => {
           tabBarLabel: "Home",
           tabBarShowLabel: false,
           headerShown: false,
-          tabBarIcon: ({ focused, color, size }) => (
+          tabBarIcon: ({ focused, color }) => (
             <Entypo name="calendar" size={focused ? 36 : 24} color={color} />
           ),
         }}
@@ -46,7 +46,7 @@ export const TabNavigator = () => {
           tabBarLabel: "Home",
           tabBarShowLabel: false,
           headerShown: false,
-          tabBarIcon: ({ focused, color, size }) => (
+          tabBarIcon: ({ focused, color }) => (
             <Feather name="settings" size={focused ? 36 : 24} color={color} />
           ),
         }}

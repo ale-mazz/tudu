@@ -10,11 +10,12 @@ import {
   View,
 } from "react-native";
 import React from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addItem } from "../redux/actions/item.actions/actions";
 import { Item } from "../redux/types/types";
 import { Ionicons } from "@expo/vector-icons";
 import Emoji from "react-native-emoji";
+import { RootState } from "../redux";
 
 type Props = {
   modalVisible: boolean;
@@ -26,7 +27,7 @@ export const AddItemModal: React.FC<Props> = ({
   setModalVisible,
 }) => {
   const dispatch = useDispatch();
-
+  const { selectedDay } = useSelector((state: RootState) => state.day);
   const [inputText, setInputText] = React.useState("");
 
   const addTuduItem = (itemText: string) => {
@@ -34,6 +35,7 @@ export const AddItemModal: React.FC<Props> = ({
       text: itemText,
       completed: false,
       color: getRandomColor(),
+      day: selectedDay,
     };
     dispatch(addItem(newItem));
   };

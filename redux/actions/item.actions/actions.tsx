@@ -1,8 +1,10 @@
 import {
   ADD_ITEM,
+  DayAction,
   Item,
   ItemListAction,
   REMOVE_ITEM,
+  SET_SELECTED_DAY,
   UPDATE_ITEM,
 } from "../../types/types";
 import { ActionCreator } from "redux";
@@ -20,4 +22,10 @@ export const updateItem: ActionCreator<ItemListAction> = (
 
 export const removeItem: ActionCreator<ItemListAction> = (index: number) => {
   return { type: REMOVE_ITEM, index };
+};
+
+export const setSelectedDay: ActionCreator<DayAction> = (
+  selectedDay: string
+) => {
+  return { type: SET_SELECTED_DAY, selectedDay };
 };

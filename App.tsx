@@ -17,6 +17,7 @@ const Stack = createNativeStackNavigator<StackParamList>();
 
 const App = () => {
   let [fontsLoaded] = useFonts({
+    "Montserrat-LightItalic": require("./assets/fonts/Montserrat-LightItalic.otf"),
     "Montserrat-Medium": require("./assets/fonts/Montserrat-Medium.otf"),
     "Montserrat-Bold": require("./assets/fonts/Montserrat-Bold.otf"),
     "Montserrat-Regular": require("./assets/fonts/Montserrat-Regular.otf"),
