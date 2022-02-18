@@ -35,7 +35,7 @@ const Home: React.FC = () => {
     if (!selectedDay) {
       dispatch(setSelectedDay(moment(new Date()).format("YYYY-MM-DD")));
     }
-  }, []);
+  }, [selectedDay]);
 
   return (
     <View style={styles.container}>
