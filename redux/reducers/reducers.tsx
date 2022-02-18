@@ -1,17 +1,24 @@
 import {
   ADD_ITEM,
+  DayAction,
+  DayState,
   ItemListAction,
   ItemListState,
   REMOVE_ITEM,
+  SET_SELECTED_DAY,
   UPDATE_ITEM,
 } from "../types/types";
 
-const initialState: ItemListState = {
+const initialItemsState: ItemListState = {
   items: [],
 };
 
+const initialDayState: DayState = {
+  selectedDay: "",
+};
+
 export const ItemsReducer = (
-  state: ItemListState = initialState,
+  state: ItemListState = initialItemsState,
   action: ItemListAction
 ) => {
   switch (action.type) {
@@ -31,6 +38,18 @@ export const ItemsReducer = (
             : { ...item, completed: !item.completed };
         }),
       };
+    default:
+      return state;
+  }
+};
+
+export const DayReducer = (
+  state: DayState = initialDayState,
+  action: DayAction
+) => {
+  switch (action.type) {
+    case SET_SELECTED_DAY:
+      return { selectedDay: action.selectedDay };
     default:
       return state;
   }

@@ -8,21 +8,34 @@ import {
   View,
 } from "react-native";
 import { StatusBar } from "expo-status-bar";
-import React from "react";
+import React, { useEffect } from "react";
 import { AntDesign } from "@expo/vector-icons";
 import { AddItemModal } from "./add-item-modal";
 import { Item } from "../redux/types/types";
 import Tudu from "./tudu";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../redux";
+import { setSelectedDay } from "../redux/actions/item.actions/actions";
+import moment from "moment";
+import "moment/locale/it";
 
 const Home: React.FC = () => {
+  moment.locale("it");
+
   const [modalVisible, setModalVisible] = React.useState(false);
   const { items } = useSelector((state: RootState) => state.items);
+  const { selectedDay } = useSelector((state: RootState) => state.day);
+  const dispatch = useDispatch();
 
   const onOpenModal = () => {
     setModalVisible(true);
   };
+
+  useEffect(() => {
+    if (!selectedDay) {
+      dispatch(setSelectedDay(moment(new Date()).format("YYYY-MM-DD")));
+    }
+  }, []);
 
   return (
     <View style={styles.container}>
@@ -30,6 +43,7 @@ const Home: React.FC = () => {
       <SafeAreaView style={styles.safeArea}>
         <View style={styles.header}>
           <Text style={styles.headerText}>tudu</Text>
+          <Text style={styles.dayText}>{moment(selectedDay).format("LL")}</Text>
           <TouchableOpacity onPress={() => onOpenModal()}>
             <AntDesign
               style={styles.headerIcon}
@@ -41,10 +55,13 @@ const Home: React.FC = () => {
         </View>
       </SafeAreaView>
       <ScrollView style={styles.scrollArea}>
-        {items.map((item: Item, index: number) => (
-          <Tudu key={item.text + "_" + index} item={item} index={index} />
-        ))}
-
+        {items.map((item: Item, index: number) => {
+          if (item.day === selectedDay) {
+            return (
+              <Tudu key={item.text + "_" + index} item={item} index={index} />
+            );
+          }
+        })}
         <AddItemModal
           modalVisible={modalVisible}
           setModalVisible={setModalVisible}
@@ -76,6 +93,14 @@ const styles = StyleSheet.create({
     marginLeft: 22,
     marginTop: 12,
     fontFamily: "Montserrat-Medium",
+  },
+
+  dayText: {
+    fontSize: 14,
+    marginTop: 20,
+    textAlignVertical: "center",
+    textAlign: "center",
+    fontFamily: "Montserrat-LightItalic",
   },
 
   headerIcon: {
