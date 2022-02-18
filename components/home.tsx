@@ -32,10 +32,12 @@ const Home: React.FC = () => {
   };
 
   useEffect(() => {
+    console.log(selectedDay);
+    console.log(items);
     if (!selectedDay) {
       dispatch(setSelectedDay(moment(new Date()).format("YYYY-MM-DD")));
     }
-  }, []);
+  }, [selectedDay]);
 
   return (
     <View style={styles.container}>

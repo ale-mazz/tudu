@@ -11,16 +11,22 @@ export interface RootState {
   day: DayState & PersistPartial;
 }
 
-export const persistConfig = {
+export const persistItemConfig = {
   key: "root",
   storage: AsyncStorage,
-  whitelist: ["items", "day"],
+  whitelist: ["items"],
+};
+
+export const persistDayConfig = {
+  key: "root",
+  storage: AsyncStorage,
+  whitelist: ["day"],
 };
 
 const rootReducer = combineReducers({
   // Messed up typechecking :(
-  items: persistReducer<any, any>(persistConfig, ItemsReducer),
-  day: persistReducer<any, any>(persistConfig, DayReducer),
+  items: persistReducer<any, any>(persistItemConfig, ItemsReducer),
+  day: persistReducer<any, any>(persistDayConfig, DayReducer),
 });
 
 export const store = createStore(rootReducer, applyMiddleware(thunk));
