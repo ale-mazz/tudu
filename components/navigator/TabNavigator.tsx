@@ -1,8 +1,8 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import Home from "../home";
+import Home from "../Home";
 import { Entypo, Feather } from "@expo/vector-icons";
-import Calendar from "../tudu-calendar";
-import Settings from "../settings";
+import Calendar from "../TuduCalendar";
+import Settings from "../Settings";
 
 const Tab = createBottomTabNavigator();
 

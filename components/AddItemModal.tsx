@@ -67,7 +67,13 @@ export const AddItemModal: React.FC<Props> = ({
         </TouchableWithoutFeedback>
         <View style={styles.modalView}>
           <View style={styles.modalHeader}>
-            <Text style={{ marginRight: 4, fontFamily: "Montserrat-Regular" }}>
+            <Text
+              style={{
+                fontSize: 18,
+                marginRight: 4,
+                fontFamily: "Montserrat-Medium",
+              }}
+            >
               Aggiungi un nuovo tudu!
             </Text>
             <Emoji name="blush" style={{ fontSize: 18 }} />
@@ -170,16 +176,16 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   confirmActiveButton: {
-    marginRight: 18,
+    marginRight: 0,
   },
   confirmDisabledButton: {
-    marginRight: 18,
+    marginRight: 0,
     opacity: 0.2,
   },
   textInput: {
+    fontSize: 16,
     width: "100%",
-    marginLeft: 18,
-    marginRight: 18,
+    marginHorizontal: 12,
     flexShrink: 1,
     flexGrow: 1,
     borderBottomWidth: 1,

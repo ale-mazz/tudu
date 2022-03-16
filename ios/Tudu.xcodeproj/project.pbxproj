@@ -14,7 +14,7 @@
 		96905EF65AED1B983A6B3ABC /* libPods-Tudu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58EEBF8E8E6FB1BC6CAF49B5 /* libPods-Tudu.a */; };
 		B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */; };
 		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
-		ED9B71B69A3E46FB8398466F /* noop-file.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3E348E9DE549869B885492 /* noop-file.swift */; };
+		2C737B1FD9414D0992B548C9 /* noop-file.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA55E8AEE9F644089578102D /* noop-file.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,8 +32,8 @@
 		BB2F792C24A3F905000567C9 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expo.plist; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-Tudu/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
-		2B3E348E9DE549869B885492 /* noop-file.swift */ = {isa = PBXFileReference; name = "noop-file.swift"; path = "Tudu/noop-file.swift"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.swift; explicitFileType = undefined; includeInIndex = 0; };
-		34EE81DCEF27434B883F9708 /* Tudu-Bridging-Header.h */ = {isa = PBXFileReference; name = "Tudu-Bridging-Header.h"; path = "Tudu/Tudu-Bridging-Header.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		BA55E8AEE9F644089578102D /* noop-file.swift */ = {isa = PBXFileReference; name = "noop-file.swift"; path = "Tudu/noop-file.swift"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.swift; explicitFileType = undefined; includeInIndex = 0; };
+		14D75C03AACF44DBA9B9875F /* Tudu-Bridging-Header.h */ = {isa = PBXFileReference; name = "Tudu-Bridging-Header.h"; path = "Tudu/Tudu-Bridging-Header.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,8 +59,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB71A68108700A75B9A /* main.m */,
 				AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */,
-				2B3E348E9DE549869B885492 /* noop-file.swift */,
-				34EE81DCEF27434B883F9708 /* Tudu-Bridging-Header.h */,
+				BA55E8AEE9F644089578102D /* noop-file.swift */,
+				14D75C03AACF44DBA9B9875F /* Tudu-Bridging-Header.h */,
 			);
 			name = Tudu;
 			sourceTree = "<group>";
@@ -201,7 +201,7 @@
 				BB2F792D24A3F905000567C9 /* Expo.plist in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */,
-				45D3BE62623A41BBB5FE7002 /* Tudu-Bridging-Header.h in Resources */,
+				5630370BEA6D411E8627901D /* Tudu-Bridging-Header.h in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,7 +293,7 @@
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */,
-				ED9B71B69A3E46FB8398466F /* noop-file.swift in Sources */,
+				2C737B1FD9414D0992B548C9 /* noop-file.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
