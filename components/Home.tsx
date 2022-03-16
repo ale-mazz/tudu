@@ -1,7 +1,6 @@
 import {
   Platform,
   SafeAreaView,
-  ScrollView,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -10,14 +9,15 @@ import {
 import { StatusBar } from "expo-status-bar";
 import React, { useEffect } from "react";
 import { AntDesign } from "@expo/vector-icons";
-import { AddItemModal } from "./add-item-modal";
+import { AddItemModal } from "./AddItemModal";
 import { Item } from "../redux/types/types";
-import Tudu from "./tudu";
+import Tudu from "./Tudu";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../redux";
 import { setSelectedDay } from "../redux/actions/item.actions/actions";
 import moment from "moment";
 import "moment/locale/it";
+import { ScrollView } from "react-native-gesture-handler";
 
 const Home: React.FC = () => {
   moment.locale("it");
@@ -89,14 +89,14 @@ const styles = StyleSheet.create({
   },
 
   headerText: {
-    fontSize: 28,
+    fontSize: 34,
     marginLeft: 22,
     marginTop: 12,
     fontFamily: "Montserrat-Medium",
   },
 
   dayText: {
-    fontSize: 14,
+    fontSize: 18,
     marginTop: 20,
     textAlignVertical: "center",
     textAlign: "center",
