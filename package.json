@@ -2,7 +2,7 @@
   "name": "tudu",
   "version": "0.0.4",
   "scripts": {
-    "start": "expo start --dev-client",
+    "start": "expo start",
     "android": "expo run:android",
     "build android": "eas build -p android --profile preview",
     "ios": "expo run:ios",
@@ -31,8 +31,7 @@
     "react-native-calendars": "^1.1278.0",
     "react-native-emoji": "^1.8.0",
     "react-native-gesture-handler": "~2.1.0",
-    "react-native-popup-menu": "^0.15.12",
-    "react-native-safe-area-context": "3.3.2",
+    "react-native-safe-area-context": "^3.3.2",
     "react-native-screens": "~3.10.1",
     "react-native-web": "0.17.1",
     "react-redux": "^7.2.6",

@@ -1,6 +1,6 @@
 import { Text, StyleSheet, TouchableOpacity, View } from "react-native";
 import React from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Item } from "../redux/types/types";
 import { removeItem, updateItem } from "../redux/actions/item.actions/actions";
 import {
@@ -9,6 +9,8 @@ import {
 } from "react-native-gesture-handler";
 import BouncyCheckbox from "react-native-bouncy-checkbox";
 import { Feather } from "@expo/vector-icons";
+import { RootState } from "../redux";
+import { customTheme } from "../theme";
 
 type Props = {
   item: Item;
@@ -16,6 +18,7 @@ type Props = {
 };
 
 export const Tudu: React.FC<Props> = ({ item, index }) => {
+  const { theme } = useSelector((state: RootState) => state.theme);
   const dispatch = useDispatch();
 
   const onDeleteItem = (index: number) => {
@@ -30,18 +33,18 @@ export const Tudu: React.FC<Props> = ({ item, index }) => {
     return (
       <TouchableOpacity
         onPress={() => onDeleteItem(index)}
-        style={styles(item).iconContainer}
+        style={styles(item, theme).iconContainer}
       >
-        <Feather name="trash-2" size={30} color="red" />
+        <Feather name="trash-2" size={30} color={theme.PRIMARY_ACCENT_COLOR} />
       </TouchableOpacity>
     );
   };
 
   return (
-    <View style={styles(item).shadowContainer}>
+    <View style={styles(item, theme).shadowContainer}>
       <GestureHandlerRootView>
         <Swipeable renderRightActions={() => renderTrashButton(index)}>
-          <View style={styles(item).item}>
+          <View style={styles(item, theme).item}>
             <View
               style={{
                 width: 20,
@@ -52,17 +55,15 @@ export const Tudu: React.FC<Props> = ({ item, index }) => {
                 marginLeft: 8,
               }}
             />
-            <View
-              style={styles(item).text}
-              //onLongPress={(event) => setDeleting()}
-            >
-              <Text style={styles(item).text}>{item.text}</Text>
+            <View style={styles(item, theme).text}>
+              <Text style={styles(item, theme).text}>{item.text}</Text>
             </View>
             <BouncyCheckbox
               isChecked={item.completed}
-              fillColor="cornflowerblue"
+              fillColor={theme.PRIMARY_BUTTON_COLOR}
               iconStyle={{
-                borderColor: "cornflowerblue",
+                borderWidth: 2,
+                borderRadius: 11,
               }}
               onPress={() => onUpdateItem(item, index)}
             />
@@ -73,7 +74,7 @@ export const Tudu: React.FC<Props> = ({ item, index }) => {
   );
 };
 
-const styles = (item: Item) =>
+const styles = (item: Item, theme: customTheme) =>
   StyleSheet.create({
     shadowContainer: {
       shadowColor: "#000",
@@ -83,8 +84,8 @@ const styles = (item: Item) =>
       },
       shadowOpacity: 0.18,
       shadowRadius: 6.68,
-      elevation: 8,
     },
+
     item: {
       paddingVertical: 16,
       marginVertical: 10,
@@ -94,9 +95,11 @@ const styles = (item: Item) =>
       flexDirection: "row",
       justifyContent: "space-between",
       alignItems: "center",
-      backgroundColor: "white",
+      backgroundColor: theme.SECONDARY_BACKGROUND_COLOR,
+      elevation: 5,
     },
     text: {
+      color: theme.PRIMARY_TEXT_COLOR,
       marginLeft: 0,
       marginRight: 12,
       fontFamily: "Montserrat-Regular",
@@ -105,12 +108,6 @@ const styles = (item: Item) =>
       flexGrow: 1,
       textDecorationLine: item.completed ? "line-through" : "none",
       opacity: item.completed ? 0.3 : 1,
-    },
-    menuOptionText: {
-      fontFamily: "Montserrat-Regular",
-      fontSize: 14,
-      textAlign: "center",
-      color: "black",
     },
     deleteButtonText: {
       textAlign: "center",

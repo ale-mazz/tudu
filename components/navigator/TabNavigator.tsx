@@ -3,16 +3,26 @@ import Home from "../Home";
 import { Entypo, Feather } from "@expo/vector-icons";
 import Calendar from "../TuduCalendar";
 import Settings from "../Settings";
+import { useSelector } from "react-redux";
+import { RootState } from "../../redux";
+import { View } from "react-native";
 
 const Tab = createBottomTabNavigator();
 
 export const TabNavigator = () => {
+  const { theme } = useSelector((state: RootState) => state.theme);
   return (
     <Tab.Navigator
       initialRouteName={"Home"}
       screenOptions={{
-        tabBarActiveTintColor: "cornflowerblue",
-        tabBarInactiveTintColor: "gray",
+        tabBarActiveTintColor: theme.PRIMARY_BUTTON_COLOR,
+        tabBarInactiveTintColor: theme.PRIMARY_BUTTON_COLOR,
+        tabBarActiveBackgroundColor: theme.PRIMARY_BACKGROUND_COLOR,
+        tabBarInactiveBackgroundColor: theme.PRIMARY_BACKGROUND_COLOR,
+        tabBarStyle: {
+          backgroundColor: theme.PRIMARY_BACKGROUND_COLOR,
+          borderTopWidth: 0,
+        },
       }}
     >
       <Tab.Screen
@@ -22,8 +32,12 @@ export const TabNavigator = () => {
           tabBarLabel: "Home",
           tabBarShowLabel: false,
           headerShown: false,
-          tabBarIcon: ({ focused, color }) => (
-            <Entypo name="list" size={focused ? 36 : 24} color={color} />
+          tabBarIcon: ({ focused }) => (
+            <Entypo
+              name="list"
+              size={focused ? 36 : 24}
+              color={theme.PRIMARY_BUTTON_COLOR}
+            />
           ),
         }}
       />
@@ -34,8 +48,12 @@ export const TabNavigator = () => {
           tabBarLabel: "Home",
           tabBarShowLabel: false,
           headerShown: false,
-          tabBarIcon: ({ focused, color }) => (
-            <Entypo name="calendar" size={focused ? 36 : 24} color={color} />
+          tabBarIcon: ({ focused }) => (
+            <Entypo
+              name="calendar"
+              size={focused ? 36 : 24}
+              color={theme.PRIMARY_BUTTON_COLOR}
+            />
           ),
         }}
       />
@@ -46,8 +64,12 @@ export const TabNavigator = () => {
           tabBarLabel: "Home",
           tabBarShowLabel: false,
           headerShown: false,
-          tabBarIcon: ({ focused, color }) => (
-            <Feather name="settings" size={focused ? 36 : 24} color={color} />
+          tabBarIcon: ({ focused }) => (
+            <Feather
+              name="settings"
+              size={focused ? 36 : 24}
+              color={theme.PRIMARY_BUTTON_COLOR}
+            />
           ),
         }}
       />
