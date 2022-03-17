@@ -1,12 +1,12 @@
 import "react-native-gesture-handler";
 import AppLoading from "expo-app-loading";
-import { Provider } from "react-redux";
-import { persistor, store } from "./redux";
-import { MenuProvider } from "react-native-popup-menu";
+import { Provider, useSelector } from "react-redux";
+import { persistor, RootState, store } from "./redux";
 import { PersistGate } from "redux-persist/integration/react";
 import { TabNavigator } from "./components/navigator/TabNavigator";
 import { useFonts } from "expo-font";
 import { NavigationContainer } from "@react-navigation/native";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 type StackParamList = {
@@ -30,7 +30,7 @@ const App = () => {
   return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-        <MenuProvider>
+        <SafeAreaProvider>
           <NavigationContainer>
             <Stack.Navigator initialRouteName={"TabNav"}>
               <Stack.Screen
@@ -40,7 +40,7 @@ const App = () => {
               />
             </Stack.Navigator>
           </NavigationContainer>
-        </MenuProvider>
+        </SafeAreaProvider>
       </PersistGate>
     </Provider>
   );

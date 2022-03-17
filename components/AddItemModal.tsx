@@ -16,6 +16,7 @@ import { Item } from "../redux/types/types";
 import { Ionicons } from "@expo/vector-icons";
 import Emoji from "react-native-emoji";
 import { RootState } from "../redux";
+import { customTheme } from "../theme";
 
 type Props = {
   modalVisible: boolean;
@@ -28,6 +29,7 @@ export const AddItemModal: React.FC<Props> = ({
 }) => {
   const dispatch = useDispatch();
   const { selectedDay } = useSelector((state: RootState) => state.day);
+  const { theme } = useSelector((state: RootState) => state.theme);
   const [inputText, setInputText] = React.useState("");
 
   const addTuduItem = (itemText: string) => {
@@ -60,17 +62,18 @@ export const AddItemModal: React.FC<Props> = ({
     >
       <KeyboardAvoidingView
         behavior={Platform.OS === "ios" ? "padding" : "height"}
-        style={styles.container}
+        style={styles(theme).container}
       >
         <TouchableWithoutFeedback onPress={() => onCloseModal()}>
-          <View style={styles.modalOverlay} />
+          <View style={styles(theme).modalOverlay} />
         </TouchableWithoutFeedback>
-        <View style={styles.modalView}>
-          <View style={styles.modalHeader}>
+        <View style={styles(theme).modalView}>
+          <View style={styles(theme).modalHeader}>
             <Text
               style={{
                 fontSize: 18,
                 marginRight: 4,
+                color: theme.PRIMARY_TEXT_COLOR,
                 fontFamily: "Montserrat-Medium",
               }}
             >
@@ -78,12 +81,13 @@ export const AddItemModal: React.FC<Props> = ({
             </Text>
             <Emoji name="blush" style={{ fontSize: 18 }} />
           </View>
-          <View style={styles.modalContentView}>
+          <View style={styles(theme).modalContentView}>
             <TextInput
+              placeholderTextColor={theme.PRIMARY_TEXT_COLOR}
               autoCorrect={true}
               autoFocus={true}
               multiline={true}
-              style={styles.textInput}
+              style={styles(theme).textInput}
               placeholder={"Tudu ..."}
               maxLength={120}
               textAlign={"left"}
@@ -93,15 +97,15 @@ export const AddItemModal: React.FC<Props> = ({
               disabled={inputText.length < 1}
               style={
                 inputText
-                  ? styles.confirmActiveButton
-                  : styles.confirmDisabledButton
+                  ? styles(theme).confirmActiveButton
+                  : styles(theme).confirmDisabledButton
               }
               onPress={() => onSuccessfulCloseModal()}
             >
               <Ionicons
                 name="ios-add-circle-outline"
                 size={36}
-                color="cornflowerblue"
+                color={theme.PRIMARY_BUTTON_COLOR}
               />
             </TouchableOpacity>
           </View>
@@ -132,64 +136,65 @@ function getRandomColor() {
   ];
   return colors[Math.floor(Math.random() * 8)];
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    flexShrink: 0,
-  },
-  modalHeader: {
-    justifyContent: "space-between",
-    alignItems: "center",
-    flexDirection: "row",
-  },
-  modalOverlay: {
-    position: "absolute",
-    top: 0,
-    bottom: 0,
-    left: 0,
-    right: 0,
-    backgroundColor: "rgba(0,0,0,0.5)",
-  },
-  modalView: {
-    paddingHorizontal: 10,
-    backgroundColor: "white",
-    borderRadius: 20,
-    padding: 35,
-    alignItems: "center",
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 2,
+const styles = (theme: customTheme) =>
+  StyleSheet.create({
+    container: {
+      flex: 1,
+      alignItems: "center",
+      justifyContent: "center",
+      flexShrink: 0,
     },
-    shadowOpacity: 0.25,
-    shadowRadius: 4,
-    elevation: 5,
-  },
-  modalContentView: {
-    marginTop: 12,
-    width: "80%",
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-  },
-  confirmActiveButton: {
-    marginRight: 0,
-  },
-  confirmDisabledButton: {
-    marginRight: 0,
-    opacity: 0.2,
-  },
-  textInput: {
-    fontSize: 16,
-    width: "100%",
-    marginHorizontal: 12,
-    flexShrink: 1,
-    flexGrow: 1,
-    borderBottomWidth: 1,
-    borderBottomColor: "cornflowerblue",
-    textAlignVertical: "top",
-  },
-});
+    modalHeader: {
+      justifyContent: "space-between",
+      alignItems: "center",
+      flexDirection: "row",
+    },
+    modalOverlay: {
+      position: "absolute",
+      top: 0,
+      bottom: 0,
+      left: 0,
+      right: 0,
+      backgroundColor: "rgba(0,0,0,0.5)",
+    },
+    modalView: {
+      paddingHorizontal: 10,
+      backgroundColor: theme.PRIMARY_BACKGROUND_COLOR,
+      borderRadius: 20,
+      padding: 35,
+      alignItems: "center",
+      shadowColor: "#000",
+      shadowOffset: {
+        width: 0,
+        height: 2,
+      },
+      shadowOpacity: 0.25,
+      shadowRadius: 4,
+      elevation: 5,
+    },
+    modalContentView: {
+      marginTop: 12,
+      width: "80%",
+      flexDirection: "row",
+      justifyContent: "space-between",
+      alignItems: "center",
+    },
+    confirmActiveButton: {
+      marginRight: 0,
+    },
+    confirmDisabledButton: {
+      marginRight: 0,
+      opacity: 0.2,
+    },
+    textInput: {
+      fontSize: 16,
+      width: "100%",
+      marginHorizontal: 12,
+      flexShrink: 1,
+      flexGrow: 1,
+      borderBottomWidth: 1,
+      borderBottomColor: theme.PRIMARY_BUTTON_COLOR,
+      textAlignVertical: "top",
+      color: theme.PRIMARY_TEXT_COLOR,
+    },
+  });
